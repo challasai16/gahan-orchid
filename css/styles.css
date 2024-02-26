@@ -1,0 +1,1009 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,300&family=Raleway:wght@200;300;400;500;600&family=Sofia&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+:root {
+  --var-black: #000000;
+  --var-gold: #d9be10;
+  --var-white: #ffffff;
+  --var-border: #d9d9d9;
+  --var-contact: #efeeee;
+  --var-footer: #e9e9e9;
+}
+
+h1,
+h2,
+h3,
+h4,
+a,
+p,
+li,
+span,
+strong,
+button {
+  font-family: "Inter", sans-serif;
+  color: var(--var-black);
+  text-decoration: none;
+  list-style: none;
+}
+img {
+    width: 100%;
+}
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+.btn-brochure {
+  border: 1px solid var(--var-gold);
+  padding: 0.5rem 1.2rem;
+  margin-left: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-brochure:hover {
+  color: var(--var-white);
+  background: var(--var-gold);
+}
+
+.header-container {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(217, 190, 16, 0.18);
+}
+
+.header-logo {
+  width: 10%;
+}
+
+.header-logo img {
+  width: 90%;
+  /*object-fit: cover;*/
+}
+.gahan-logo img {
+    width: 60%;
+}
+
+.header-nav {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.gahan-logo {
+    width: 10%;
+    
+}
+.gahan-logo a {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.header-nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
+  /*width: 100%;*/
+}
+
+.header-nav ul li a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+.header-nav .nav-links li {
+  position: relative;
+  display: inline-block;
+  padding: 0.2rem;
+}
+
+.header-nav .nav-links li::before {
+  content: "";
+  position: absolute;
+  padding: 0 0.2rem;
+  left: 0%;
+  bottom: 0;
+  width: 96%;
+  height: 2px;
+  background-color: var(--var-gold);
+  border-radius: 0.2rem;
+  scale: 0.1;
+  transform-origin: left;
+  transition: scale 0.25s;
+}
+
+.header-nav .nav-links li:hover::before {
+  scale: 1;
+  transform-origin: left;
+}
+
+.nav-brochure {
+  /* width: 100%; */
+  justify-content: right;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.nav-brochure {
+  padding-left: 1.5rem;
+}
+.nav-brochure li a {
+    font-size: 0.98rem !important;
+}
+
+/* header css ends */
+
+/* banner css starts */
+
+.banner-container {
+  width: 90%;
+  margin: 2rem auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-container .slider-image {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-container .slider-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.banner-container .slider-image .imageoverlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.54);
+}
+
+.banner-container .slider-image .content {
+  position: absolute;
+  z-index: 100;
+  top: 40%;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.banner-container .slider-image .content h2 {
+  color: var(--var-white);
+  line-height: 1.8;
+  font-size: 2rem;
+  font-weight: 500;
+  /* margin-bottom: 1.2rem; */
+}
+
+.Know-more {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--var-gold);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.slick-dots {
+  bottom: 15% !important;
+  left: 10%;
+  text-align: left !important;
+  list-style: none;
+}
+
+.slick-dots li.slick-active {
+  width: 30px !important;
+  height: 4px !important;
+  background: var(--var-gold) !important;
+}
+.slick-dots li {
+  width: 30px !important;
+  height: 4px !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+  padding-left: 10px !important;
+}
+
+.slick-dots li button {
+  display: none !important;
+}
+.desk-slider {
+    display: block !important;
+}
+.mobile-slider {
+    display: none !important;
+}
+/* banner css ends */
+
+/* highlights css starts */
+
+section.highlights {
+  width: 100%;
+}
+
+section.highlights .highlights-container {
+  width: 90%;
+  margin: 4rem auto;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  background: var(--var-white);
+}
+
+section.highlights .highlights-container .highlight {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.2rem;
+  position: relative;
+  width: calc(33%);
+  padding: 2rem 0;
+  flex: 1;
+}
+
+section.highlights .highlights-container .highlight h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+section.highlights .highlights-container .highlight p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.highlights-container .highlight:first-child::after {
+  content: "";
+  position: absolute;
+  background: #d9be10;
+  width: 2px;
+  height: 50%;
+  top: 25%;
+}
+
+.highlights-container .highlight:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  background: #d9be10;
+  width: 20%;
+  height: 2px;
+  top: 0;
+  left: 40%;
+  right: 40%;
+}
+
+.highlights-container .highlight:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  background: #d9be10;
+  width: 20%;
+  height: 2px;
+  bottom: 0;
+  left: 40%;
+  right: 40%;
+}
+
+.highlights-container .highlight:last-child::after {
+  content: "";
+  position: absolute;
+  background: #d9be10;
+  width: 2px;
+  height: 50%;
+  right: 0;
+  top: 25%;
+}
+
+/* highlights css ends */
+
+/* brochure section css starts */
+
+.gahan-orchid {
+  position: relative;
+}
+
+.gahan-orchid .border-img {
+  width: 30%;
+  position: absolute;
+  top: -19%;
+  left: 0%;
+  rotate: -361deg;
+  z-index: -1;
+}
+
+.gahan-orchid-container {
+  width: 90%;
+  margin: 7rem auto;
+  display: flex;
+}
+
+.gahan-orchid-container .content {
+  width: 65%;
+  padding: 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.gahan-orchid-container .content .title h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  word-spacing: 1px;
+  letter-spacing: 0.1em;
+}
+
+.gahan-orchid-container .content .information {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.gahan-orchid-container .content .information .info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.gahan-orchid-container .content .information .info::after {
+  content: "";
+  height: 1px;
+  width: 75%;
+  background: var(--var-border);
+}
+
+.gahan-orchid-container .content .information .info strong {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* justify-content: center; */
+}
+
+.gahan-orchid-container .content .information .info strong i {
+  width: 20px;
+  height: 20px;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.gahan-orchid-container .content .information .info strong {
+  font-size: 1.2rem;
+  font-weight: 500;
+  /* letter-spacing: 1px; */
+}
+
+.gahan-orchid-container .content .information .info p {
+  font-size: 1rem;
+  font-weight: 400;
+  padding-bottom: 0rem;
+  letter-spacing: 0.5px;
+  line-height: 2;
+}
+
+.gahan-orchid-container .content .button .btn a {
+  margin: 0;
+  background: var(--var-black);
+  color: var(--var-gold);
+  padding: 0.5rem 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.gahan-orchid-container .content .button .btn a:hover {
+  color: var(--var-white);
+  background: var(--var-gold);
+}
+
+.gahan-orchid-container .image {
+  width: 35%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.gahan-orchid-container .image img {
+  width: 100%;
+  object-fit: cover;
+}
+/* brochure section css ends */
+
+/* amenitites css starts */
+
+.amenities-container {
+  width: 80%;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.amenities-container .title {
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.amenities-container .title h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+
+.amenities-container .title h1 {
+  font-size: 4rem;
+  color: rgba(217, 190, 16, 0.2);
+  position: absolute;
+  top: -110%;
+  left: 45%;
+}
+
+.amenities-container .facilities {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 2rem 5rem;
+  padding: 5rem 0;
+}
+
+.amenities-container .facilities .facility {
+  min-width: calc(25% - 5rem);
+  flex: 1;
+  border: 1px solid var(--var-gold);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0.75rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.amenities-container .facilities .facility:hover {
+  transform: scale(1.1);
+}
+
+.amenities-container .facilities .facility:hover .image img {
+  animation: image 0.5s;
+}
+
+@keyframes image {
+  50% {
+    /* rotate: 180deg; */
+    transform: translateY(-10px);
+  }
+}
+
+.amenities-container .facilities .facility .image {
+  width: 15%;
+  position: relative;
+}
+
+.amenities-container .facilities .facility .image::after {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: var(--var-gold);
+  position: absolute;
+  right: -35%;
+}
+
+.amenities-container .facilities .facility .image img {
+  width: 100%;
+}
+
+.amenities-container .facilities .facility p {
+  width: 80%;
+  text-align: left;
+  padding-left: 2rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  word-spacing: 2px;
+}
+
+/* .amenities-container .facilities .facility p::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: var(--var-gold);
+  position: absolute;
+} */
+
+/* amenitites css ends */
+
+/* plan section css starts */
+
+.plan-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.plan-container .plan-selection {
+  display: flex;
+  width: 100%;
+  padding: 2rem;
+  border-bottom: 1px solid rgba(217, 190, 16, 0.18);
+  margin-bottom: 2rem;
+}
+
+.plan-container .plan-selection .plan-select {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plan-container .plan-selection .plan-select button {
+  padding: 0.5rem 2rem;
+  border: none;
+  background: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.plan-container .plan-content {
+  width: 100%;
+  padding-bottom: 4rem;
+  /* display: flex; */
+}
+
+.plan-container .plan-content .image {
+  min-width: 100%;
+  height: 0px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.plan-container .plan-content .image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.active-plan {
+  /* min-width: 100% !important; */
+  height: 100% !important;
+}
+
+.isactive {
+  background: var(--var-gold) !important;
+}
+
+/* plan section css ends */
+
+/* <!-- specifications section  css starts --> */
+
+.specs-container {
+  width: 80%;
+  margin: 4rem auto;
+}
+
+.specs-container .specs-title {
+  text-align: center;
+}
+
+.specs-container .specs-title h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+}
+
+.specs-container .specs-title p {
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+}
+
+.specs-container .specs-content {
+  padding: 2rem 0;
+}
+
+.specs-container .specs-content .specs-accordians {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 4rem;
+  width: 100%;
+}
+
+.specs-container .specs-content .specs-accordians .specs-accordian {
+  min-width: calc(50% - 4rem);
+  flex: 1;
+}
+
+.specs-container .specs-content .specs-accordians .specs-accordian .acc-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(217, 190, 16, 0.18);
+}
+
+.specs-container
+  .specs-content
+  .specs-accordians
+  .specs-accordian
+  .acc-title
+  h3 {
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.specs-container
+  .specs-content
+  .specs-accordians
+  .specs-accordian
+  .acc-title
+  i {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.specs-container
+  .specs-content
+  .specs-accordians
+  .specs-accordian
+  .acc-content {
+  height: 0%;
+  overflow: hidden;
+  padding: 0;
+  transition: all 0.4s ease;
+}
+
+.specs-container
+  .specs-content
+  .specs-accordians
+  .specs-accordian
+  .acc-content
+  p {
+  font-size: 1rem;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  height: 0;
+  /* text-align: center; */
+}
+
+.specs-accordian.isopen .acc-title .acc-open {
+  display: none !important;
+}
+
+.specs-accordian .acc-title .acc-open {
+  display: flex !important;
+}
+
+.specs-accordian.isopen .acc-title .acc-close {
+  display: flex !important;
+}
+
+.specs-accordian .acc-title .acc-close {
+  display: none !important;
+}
+
+/* .acc-content {
+  display: none;
+} */
+.isopen .acc-content {
+  display: flex;
+  padding: 1rem 0.7rem !important;
+  height: 100% !important;
+}
+
+.isopen .acc-content p {
+  height: 100% !important;
+  font-size: 1.1rem;
+}
+/* <!-- specifications section  css ends --> */
+
+/* contact section css starts */
+
+.contact-container {
+  width: 80%;
+  margin: 4rem auto;
+  border-radius: 20px;
+  background: var(--var-contact);
+  padding: 2rem 0;
+}
+
+.contact-container .contact-title h2 {
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+.contact-container .contact-content {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+.contact-container .contact-content .content-left {
+  width: calc(50% - 2rem);
+  flex: 1;
+}
+
+.contact-container .contact-content .content-left h3 {
+  padding: 0.5rem 2rem;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.contact-container .contact-content .content-left h3 i {
+  font-size: 1.4rem;
+  padding-right: 0.5rem;
+}
+
+.contact-container .contact-content .content-right {
+  width: calc(50% - 2rem);
+  flex: 1;
+}
+
+.contact-container .contact-content .content-right .form-container {
+  width: 100%;
+  padding: 0 3rem;
+}
+
+.contact-container .contact-content .content-right .form-container form {
+  border: 1px solid var(--var-gold);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.contact-container
+  .contact-content
+  .content-right
+  .form-container
+  form
+  .form-content {
+  width: 100%;
+  border-bottom: 1px solid rgba(217, 190, 16, 0.18);
+}
+
+.contact-container
+  .contact-content
+  .content-right
+  .form-container
+  form
+  .form-content
+  input {
+  width: 100%;
+  border: none;
+  background: none;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.contact-container
+  .contact-content
+  .content-right
+  .form-container
+  form
+  .form-content
+  input::placeholder ,.contact-container
+  .contact-content
+  .content-right
+  .form-container
+  form
+  .form-content
+ textarea::placeholder{
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-family: "Inter", sans-serif;
+  color: var(--var-black);
+  font-weight: 400;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+}
+
+.contact-container
+  .contact-content
+  .content-right
+  .form-container
+  form
+  .form-content
+  textarea {
+  width: 100%;
+  border: none;
+  background: none;
+  padding: 1rem;
+}
+
+.contact-container
+  .contact-content
+  .content-right
+  .form-container
+  form
+  .form-content
+  input[type="submit"] {
+  background: var(--var-black);
+  color: var(--var-gold);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  -webkit-text-stroke: 0.5px var(--var-gold);
+  cursor: pointer;
+}
+
+/* contact section css ends */
+
+/* footer section starts */
+
+footer {
+  background: var(--var-footer);
+}
+
+footer .footer-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+footer .footer-container .footer-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  justify-content: center;
+  
+}
+
+footer .footer-container .footer-top .logo {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .footer-container .footer-top .logo img {
+  width: 60%;
+}
+
+footer .footer-container .footer-top p {
+  /*width: 83%;*/
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  margin-top: 1rem;
+}
+
+footer .footer-container .footer-middle {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  padding: 2.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .footer-container .footer-middle .footer-middle-sub {
+  max-width: calc(33% - 2rem);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+footer .footer-container .footer-middle .footer-middle-sub a {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+}
+
+footer .footer-container .footer-middle .sub-3 {
+  gap: 1.6rem;
+}
+
+footer .footer-container .footer-middle .sub-3 p {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+footer .footer-container .footer-middle .sub-3 p i {
+  font-size: 1rem;
+}
+
+.footer-add {
+  /*font-size: 0.7rem !important;*/
+}
+
+footer .footer-container .footer-bottom {
+  display: flex;
+  padding-top: 2rem;
+  justify-content: space-between;
+}
+
+footer .footer-container .footer-bottom p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+}
+
+footer .footer-container .footer-bottom .social {
+  display: flex;
+  gap: 1rem;
+}
+
+footer .footer-container .footer-bottom .social p {
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+footer .footer-container .footer-bottom .social p:hover {
+  transform: scale(2);
+  color: var(--var-gold);
+}
+
+footer {
+  position: relative;
+  overflow: hidden;
+}
+
+footer .left {
+  width: 24%;
+  rotate: 3deg;
+  position: absolute;
+  left: 0%;
+  top: -34%;
+  /* z-index: -1; */
+  pointer-events: none;
+}
+footer .right {
+  width: 30%;
+  rotate: 180deg;
+  position: absolute;
+  right: -3%;
+  top: -15%;
+  pointer-events: none;
+}
+/* footer section ends */
